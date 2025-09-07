@@ -1,11 +1,9 @@
 version: '3'
 services:
   linksite:
-    image: nginx:alpine
+    build: .
     container_name: linksite
     restart: unless-stopped
-    volumes:
-      - /home/user/my-link-site:/usr/share/nginx/html
     expose:
       - "80"
     networks:
@@ -13,4 +11,4 @@ services:
 
 networks:
   web:
-    external: true
+    driver: bridge
