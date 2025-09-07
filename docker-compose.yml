@@ -1,0 +1,14 @@
+version: '3'
+services:
+  linksite:
+    build: .
+    container_name: linksite
+    restart: unless-stopped
+    expose:
+      - "80"
+    networks:
+      - web
+
+networks:
+  web:
+    external: true
