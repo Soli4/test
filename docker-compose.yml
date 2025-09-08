@@ -4,6 +4,8 @@ services:
   static-site:
     build: .
     container_name: static_site
-    ports:
-      - "80:80"
     restart: unless-stopped
+    labels:
+      - "traefik.enable=true"
+      - "traefik.http.routers.static-site.rule=Host(`gracechurchrblx.online`)"
+      - "traefik.http.services.static-site.loadbalancer.server.port=80"
