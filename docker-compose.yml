@@ -1,8 +1,9 @@
-version: '3.8'
+version: "3.9"
+
 services:
-  linksite:
+  static-site:
     build: .
-    container_name: linksite
-    restart: unless-stopped
+    container_name: static_site
     ports:
-      - "3000:3000"
+      - "80:80"
+    restart: unless-stopped
