@@ -1,8 +1,8 @@
 version: '3'
 services:
   linksite:
-    image: nginx:alpine
+    build: .
     container_name: linksite
     restart: unless-stopped
     ports:
-      - "4000:80"
+      - "3000"
