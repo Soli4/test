@@ -6,9 +6,3 @@ services:
     restart: unless-stopped
     ports:
       - "3000"
-    networks:
-      - web
-
-networks:
-  web:
-    driver: bridge
