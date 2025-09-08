@@ -6,5 +6,5 @@ services:
     container_name: static_site
     restart: unless-stopped
     labels:
-      - "nginx.proxy.host=gracechurchrblx.online"
-      - "nginx.proxy.port=80"
+      nginx.proxy.host: "gracechurchrblx.online"
+      nginx.proxy.port: "80"
