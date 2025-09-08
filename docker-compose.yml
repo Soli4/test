@@ -1,10 +1,10 @@
-version: "3.9"
-
+version: '3'
 services:
   static-site:
-    build: .
-    container_name: static_site
+    image: nginx:alpine
+    container_name: static-site
     restart: unless-stopped
-    labels:
-      nginx.proxy.host: "gracechurchrblx.online"
-      nginx.proxy.port: "80"
+    ports:
+      - "80:80"  # maps host port 80 to container port 80
+    volumes:
+      - ./my-site:/usr/share/nginx/html:ro
