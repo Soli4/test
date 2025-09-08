@@ -1,8 +1,8 @@
-version: '3'
+version: '3.8'
 services:
   linksite:
     build: .
     container_name: linksite
     restart: unless-stopped
     ports:
-      - "3000"
+      - "3000:3000"
